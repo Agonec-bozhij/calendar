@@ -1,0 +1,32 @@
+<div class="calendar">
+    <h1 class="calendar__title">Календарь</h1>
+
+    <div class="calendar__table">
+        <div class="calendar__table-head">
+            <div class="calendar__table-head__tile" *ngFor="let dayName of daysRuNames">
+                {{dayName}}
+            </div>
+        </div>
+
+        <div class="calendar__table-body">
+            <div class="calendar__table-body__tile" *ngFor="let day of previousDays">
+                <div class="calendar__table-body__tile-content calendar__table-body__tile-content--disabled">
+                    <div class="calendar__table-body__tile-day">{{day.dayNum}}</div>
+                </div>
+            </div>
+
+            <div class="calendar__table-body__tile" *ngFor="let day of currentDays">
+                <div class="calendar__table-body__tile-content">
+                    <div class="calendar__table-body__tile-day">{{day.dayNum}}</div>
+                </div>
+            </div>
+
+            <div class="calendar__table-body__tile" *ngFor="let day of nextDays">
+                <div class="calendar__table-body__tile-content calendar__table-body__tile-content--disabled">
+                    <div class="calendar__table-body__tile-day">{{day.dayNum}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
